@@ -1,7 +1,7 @@
 import os
 import datetime 
 
-def process_files_by_date(file_paths, output_path, dry_run=False, silent=False, log_file=None):
+def process_files_by_date(file_paths, output_path, dry_run=True):
     """Process files to organize them by date."""
     operations = []
     for file_path in file_paths:
@@ -28,7 +28,7 @@ def process_files_by_date(file_paths, output_path, dry_run=False, silent=False, 
     return operations
 
 
-def process_files_by_type(file_paths, output_path, dry_run=False, silent=False, log_file=None):
+def process_files_by_type(file_paths, output_path, dry_run=False):
     """Process files to organize them by type, first separating into text-based and image-based files."""
     operations = []
 
@@ -47,7 +47,7 @@ def process_files_by_type(file_paths, output_path, dry_run=False, silent=False, 
         # Check if it's an image file
         if ext in image_extensions:
             # Image-based files
-            top_folder = 'image_files'
+            top_folder = f'{ext}'
             # You can add subcategories here if needed
             folder_name = top_folder
 
