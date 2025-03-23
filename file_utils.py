@@ -1,4 +1,5 @@
 import os
+
 def separate_files_by_type(file_paths):
     """Separate files into images and text files based on their extensions."""
     image_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff')
