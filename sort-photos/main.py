@@ -75,7 +75,7 @@ def main():
             operations = process_files_by_date(file_paths, output_path, dry_run=dry_run)
         if mode == 'type':
             # Process files by type
-            operations = process_files_by_type(file_paths, output_path, dry_run=False)
+            operations = process_files_by_type(file_paths, output_path, dry_run=dry_run)
         # Simulate and display the proposed directory tree
         print("-" * 50)
         message = "Proposed directory structure:"
