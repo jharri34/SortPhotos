@@ -1,12 +1,12 @@
-# SortPhoto
+# sort-photos
 
-**SortPhoto** is a minimalist, dependency-free image sorting tool written in pure Python. It scans a directory full of image files and organizes them into a structured folder system based on either **creation date** or **file type**.
+**sort-photos** is a minimalist, dependency-free image sorting tool written in pure Python. It scans a directory full of image files and organizes them into a structured folder system based on either **creation date** or **file type**.
 
 > **Tidy up your photos with ease — sort by date or type, preview results before making changes, and enjoy a clutter-free photo archive.**
 
 ---
 
-## ⚡ SortPhoto Features
+## ⚡ sort-photos Features
 
 - 📅 **Sort by Date**  
   Organizes images by creation date into a clean year/month/day folder structure.
@@ -34,7 +34,7 @@
 
 ---
 
-## 🚀 Running SortPhoto
+## 🚀 Running sort-photos
 
 Update the `DATA_PATH` variable in `main.py` to the folder you want to sort.
 
