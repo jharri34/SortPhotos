@@ -1,29 +1,4 @@
-# 🛠️ Artisan AI Suite
-
-**Artisan AI Suite** is a powerful, lightweight collection of AI-powered tools designed for artists, content creators, and portfolio managers.
-
-Launched in **November 2024**, Artisan AI Suite makes it easy to sort and manage art portfolios, automate social media posting, and generate intelligent blog content suggestions — all using **local AI models** for privacy and control.
-
----
-
-## 🧠 Overview
-
-Artisan AI Suite provides:
-
-- 📂 **Portfolio Organization**  
-  Automatically sort and clean up art archives by type, creation date, or custom categories.
-
-- 📣 **Social Media Automation**  
-  Generate AI-powered post captions and schedule uploads across platforms.
-
-- 📝 **Content Suggestion Engine**  
-  Get intelligent blog topic ideas based on your portfolio, recent works, or social trends — no cloud connection required.
-
-Artisan AI Suite is built for speed, simplicity, and full user control — without depending on external servers or APIs.
-
----
-
-## 🔍 Featured Tool: SortPhoto
+# SortPhoto
 
 **SortPhoto** is a minimalist, dependency-free image sorting tool written in pure Python. It scans a directory full of image files and organizes them into a structured folder system based on either **creation date** or **file type**.
 
@@ -118,3 +93,27 @@ Naztech Automated Data Sorting Tools
 FileWizardAI by AIxHunter
 
 
+# 🛠️ Artisan AI Suite
+
+**Artisan AI Suite** is a powerful, lightweight collection of AI-powered tools designed for artists, content creators, and portfolio managers.
+
+Launched in **November 2024**, Artisan AI Suite makes it easy to sort and manage art portfolios, automate social media posting, and generate intelligent blog content suggestions — all using **local AI models** for privacy and control.
+
+---
+
+## 🧠 Overview
+
+Artisan AI Suite provides:
+
+- 📂 **Portfolio Organization**  
+  Automatically sort and clean up art archives by type, creation date, or custom categories.
+
+- 📣 **Social Media Automation**  
+  Generate AI-powered post captions and schedule uploads across platforms.
+
+- 📝 **Content Suggestion Engine**  
+  Get intelligent blog topic ideas based on your portfolio, recent works, or social trends — no cloud connection required.
+
+Artisan AI Suite is built for speed, simplicity, and full user control — without depending on external servers or APIs.
+
+---
