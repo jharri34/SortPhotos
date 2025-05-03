@@ -19,5 +19,5 @@ Homepage = "https://github.com/jharri34/sortphoto"
 Issues = "https://github.com/jharri34/sortphoto/issues"
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
