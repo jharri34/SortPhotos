@@ -17,14 +17,7 @@ def simulate_directory_tree(operations, base_path):
                 current_level[part] = {}
             current_level = current_level[part]
     return tree
-def display_simulated_tree(tree, prefix=''):
-    """Print the simulated directory tree."""
-    pointers = ['├── '] * (len(tree) - 1) + ['└── '] if tree else []
-    for pointer, key in zip(pointers, tree):
-        print(prefix + pointer + key)
-        if tree[key]:  # If there are subdirectories or files
-            extension = '│   ' if pointer == '├── ' else '    '
-            display_simulated_tree(tree[key], prefix + extension)
+
 def display_directory_tree(path):
     """Display the directory tree in a format similar to the 'tree' command, including the full path."""
     def tree(dir_path, prefix=''):
@@ -52,3 +45,20 @@ def collect_file_paths(base_path):
                 if not file.startswith('.'):  # Exclude hidden files
                     file_paths.append(os.path.join(root, file))
         return file_paths
+def display_simulated_tree(tree, prefix=''):
+    """Print the simulated directory tree."""
+    pointers = ['├── '] * (len(tree) - 1) + ['└── '] if tree else []
+    for pointer, key in zip(pointers, tree):
+        print(prefix + pointer + key)
+        if tree[key]:  # If there are subdirectories or files
+            extension = '│   ' if pointer == '├── ' else '    '
+            display_simulated_tree(tree[key], prefix + extension)
+            
+def print_simulated_tree(tree, prefix=''):
+    """Print the simulated directory tree."""
+    pointers = ['├── '] * (len(tree) - 1) + ['└── '] if tree else []
+    for pointer, key in zip(pointers, tree):
+        print(prefix + pointer + key)
+        if tree[key]:  # If there are subdirectories or files
+            extension = '│   ' if pointer == '├── ' else '    '
+            print_simulated_tree(tree[key], prefix + extension)

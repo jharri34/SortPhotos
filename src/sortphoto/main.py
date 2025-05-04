@@ -1,8 +1,8 @@
 import os
 import time
 import getopt, sys
-from file_utils import collect_file_paths,display_directory_tree,simulate_directory_tree, display_simulated_tree, separate_files_by_type 
-from data_processing import process_files_by_date, process_files_by_type
+from file_utils import collect_file_paths,display_directory_tree,simulate_directory_tree, display_simulated_tree 
+from data_processing import process_files_by_date, process_files_by_type,execute_operations
 
 DATA_PATH = "/mnt/d/Pictures"
 OUTPUT_PATH = "/mnt/d/Organize_Pictures"
@@ -15,7 +15,19 @@ options = "hdt"
 # Long options
 long_options = ["Help", "date", "type"]
 
-
+def get_yes_no(prompt):
+    """Prompt the user for a yes/no response."""
+    while True:
+        response = input(prompt).strip().lower()
+        if response in ('yes', 'y'):
+            return True
+        elif response in ('no', 'n'):
+            return False
+        elif response == '/exit':
+            print("Exiting program.")
+            exit()
+        else:
+            print("Please enter 'yes' or 'no'. To exit, type '/exit'.")
 
 def main():
     dry_run = True
@@ -83,6 +95,26 @@ def main():
         print(os.path.abspath(output_path))
         simulated_tree = simulate_directory_tree(operations, output_path)
         display_simulated_tree(simulated_tree)
+        print("-" * 50)
+        # Ask user if they want to proceed
+    proceed = get_yes_no("Would you like to proceed with these changes? (yes/no): ")
+    if proceed:
+        # Create the output directory now
+        os.makedirs(output_path, exist_ok=True)
+
+        # Perform the actual file operations
+        message = "Performing file operations..."
+
+        print(message)
+        execute_operations(
+        operations,
+        dry_run=False,
+       
+        )
+
+        message = "The files have been organized successfully."
+        print("-" * 50)
+        print(message)
         print("-" * 50)
    
 if __name__=="__main__":
